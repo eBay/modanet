@@ -40,6 +40,8 @@ Each polygon (bounding box, segmentation mask) annotation is assigned to one of 
 |12 | headwear |
 |13 | scarf & tie |
 
+The annotation data format of ModaNet follows the same style as [COCO-dataset](http://cocodataset.org).
+
 ## Contributing
 You are more than welcome to contribute to this github repo! Either by submitting a bug report, or providing feedback about this dataset. Please open issues for specific tasks or post to the contact Google group below.
 
