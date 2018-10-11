@@ -7,7 +7,7 @@
 * [Labels](#labels)
 * [Contributing](#contributing)
 * [Contact](#contact)
-* [Citing Fashion-ModaNet](#citing-modanet)
+* [Citing ModaNet](#citing-modanet)
 </p></details><p></p>
 
 
