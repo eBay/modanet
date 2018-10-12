@@ -42,6 +42,132 @@ Each polygon (bounding box, segmentation mask) annotation is assigned to one of 
 
 The annotation data format of ModaNet follows the same style as [COCO-dataset](http://cocodataset.org).
 
+
+#### Data format
+```
+{
+'info' : info, 'images' : [image], 'annotations' : [annotation], 'licenses' : [license],'year': year, 'categories': [category], 'type': type
+}
+
+info{
+'version' : str, 'description' : str, 'contributor' : str, 'date_created' : datetime,
+}
+
+image{
+'id' : int, 'width' : int, 'height' : int, 'file_name' : str, 'license' : int
+}
+
+license{
+'id' : int, 'name' : str, 'url' : str,
+}
+
+annotation{
+  'area': int, 
+  'bbox': [x,y,width,height],
+  'segmentation': [polygon],
+  'image_id': int,
+  'id': int,
+  'category_id': int,
+  'iscrowd': int
+}
+category{
+  'supercategory': str, 'id': int, 'name': str,
+}
+```
+
+#### Submitting results to leaderboard
+
+You can participate only the Object Detection task by submitting results as follows
+
+```
+[{
+'image_id' : int, 'category_id' : int, 'bbox' : [x,y,width,height], 'score' : float,
+}]
+```
+Example
+```
+[{'bbox': [192, 30, 20, 28],
+  'category_id': 13,
+  'image_id': 100014,
+  'score': 0.8}]
+```
+
+You can participate only the Instance Segmentation/Semantic Segmentation/Polygon prediction tasks by submitting results as follows
+```
+[{
+'image_id' : int, 'category_id' : int, 'segmentation' : polygon, 'score' : float,
+}]
+```
+
+Example
+```
+[{'segmentation': [[210,
+    31,
+    212,
+    35,
+    204,
+    37,
+    204,
+    45,
+    205,
+    54,
+    199,
+    58,
+    194,
+    52,
+    198,
+    42,
+    192,
+    32,
+    194,
+    30,
+    201,
+    33]],
+  'category_id': 13,
+  'image_id': 100014,
+  'score': 0.8 }]
+```
+
+You can participate the task of joint detection and segmentation by submitting results as follows
+
+
+```
+[{
+'image_id' : int, 'category_id' : int, 'segmentation' : polygon, 'score' : float, 'bbox' : [x,y,width,height]
+}]
+```
+Example
+```
+[{'bbox': [192, 30, 20, 28],
+  'category_id': 13,
+  'image_id': 100014,
+  'segmentation': [[210,
+    31,
+    212,
+    35,
+    204,
+    37,
+    204,
+    45,
+    205,
+    54,
+    199,
+    58,
+    194,
+    52,
+    198,
+    42,
+    192,
+    32,
+    194,
+    30,
+    201,
+    33]],
+  'score': 0.8}]
+```
+
+We acknowledge the contribution of COCOdataset team and all the format would follow the same style as those in the COCOdataset.
+
 ## Contributing
 You are more than welcome to contribute to this github repo! Either by submitting a bug report, or providing feedback about this dataset. Please open issues for specific tasks or post to the contact Google group below.
 
