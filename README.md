@@ -75,6 +75,36 @@ category{
 }
 ```
 
+
+#### Setup
+
+```
+pip install -r requirements.txt
+```
+
+Excute the following command at **the parent directory of this repository** (e.g. `modanet/..`)
+
+```
+git clone https://github.com/hrsma2i/dataset-PaperDoll.git PaperDoll
+```
+
+- Setup PaperDoll dataset according to the instruction in [hrsma2i/dataset-PaperDoll](https://github.com/hrsma2i/dataset-PaperDoll).
+  - Skip the step of downloading images.
+- **Caution**
+  - ModaNet dataset has some image ids that don't exist in PaperDoll dataset. The number of images that exist in the both, is 32,337.
+  - The all `url`s(`snap_url`) in PaperDoll are not linked to main snap images that are annotated in ModaNet, so it needs to run `download_images.py`.
+
+
+```
+python download_images.py
+```
+
+This scripts downlaod
+
+- main snap images in `images`
+- their URLs in `labels/image_urls.tsv`
+
+
 #### Submitting results to leaderboard
 
 You can participate only the Object Detection task by submitting results as follows

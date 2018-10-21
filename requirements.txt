@@ -1,0 +1,10 @@
+numpy
+pandas
+Cython
+pycocotools
+beautifulsoup4
+tqdm
+aiohttp
+requests
+chainer
+chainercv
