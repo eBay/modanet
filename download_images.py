@@ -95,7 +95,7 @@ if __name__=="__main__":
 	if not os.path.isdir(out_dir):
 		os.makedirs(out_dir)
 	if not os.path.isdir(img_dir):
-		rs.makedirs(img_dir)
+		os.makedirs(img_dir)
 
 	if args.overwrite:
 		if os.path.exists(out_file):
