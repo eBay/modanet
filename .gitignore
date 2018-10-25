@@ -2,3 +2,4 @@
 images/*
 labels/*
 !labels/image_urls.tsv
+!labels/class_weight.tsv
