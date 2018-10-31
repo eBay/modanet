@@ -24,21 +24,21 @@ ModaNet is intended to serve an educational purpose by providing a benchmark ann
 ### Labels
 Each polygon (bounding box, segmentation mask) annotation is assigned to one of the following labels:
 
-| Label | Description |
-| --- | --- |
-| 1 | bag |
-| 2 | belt |
-| 3 | boots |
-| 4 | footwear |
-| 5 | outer |
-| 6 | dress |
-| 7 | sunglasses |
-| 8 | pants |
-| 9 | top |
-|10 | shorts |
-|11 | skirt |
-|12 | headwear |
-|13 | scarf & tie |
+| Label | Description | Fine-Grained-categories |
+| --- | --- | --- |
+| 1 | bag | bag |
+| 2 | belt | belt |
+| 3 | boots | boots |
+| 4 | footwear | footwear |
+| 5 | outer | coat/jacket/suit/blazers/cardigan/sweater/Jumpsuits/Rompers/vest |
+| 6 | dress | dress/t-shirt dress |
+| 7 | sunglasses | sunglasses |
+| 8 | pants | pants/jeans/leggings |
+| 9 | top | top/blouse/t-shirt/shirt |
+|10 | shorts | shorts |
+|11 | skirt | skirt |
+|12 | headwear | headwear |
+|13 | scarf & tie | scartf & tie |
 
 The annotation data format of ModaNet follows the same style as [COCO-dataset](http://cocodataset.org).
 
