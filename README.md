@@ -11,8 +11,7 @@
 </p></details><p></p>
 
 
-**ModaNet** is a street fashion images dataset consisting of annotations related to RGB images. 
-ModaNet provides multiple polygon annotations for each image.  
+**ModaNet** is a street fashion images dataset consisting of annotations related to RGB images. ModaNet provides multiple polygon annotations for each image. This dataset is described in a technical paper `ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations`[PDF](https://arxiv.org/pdf/1807.01394.pdf).
 Each polygon is associated with a label from 13 meta fashion categories. The annotations are based on images in the [PaperDoll image set](https://github.com/kyamagu/paperdoll/tree/master/data/chictopia), which has only a few hundred images annotated by the superpixel-based tool. The contribution of ModaNet is to provide new and extra **polygon** annotations for the images.
 
 
@@ -179,7 +178,7 @@ To discuss the dataset, please contact [Moda-net Google Group](https://groups.go
 ## Citing ModaNet
 If you use ModaNet, we would appreciate reference to the following paper:
 
-Shuai Zheng, Fan Yang, M. Hadi Kiapour, Robinson Piramuthu. ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations. ACM Multimedia, 2018.
+Shuai Zheng, Fan Yang, M. Hadi Kiapour, Robinson Piramuthu. ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations. ACM Multimedia, 2018. [PDF](https://arxiv.org/pdf/1807.01394.pdf)
 
 
 Biblatex entry:
