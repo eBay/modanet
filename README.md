@@ -19,6 +19,18 @@ Each polygon is associated with a label from 13 meta fashion categories. The ann
 
 ModaNet is intended to serve an educational purpose by providing a benchmark annotation set for emerging computer vision research including **semantic segmentation**, **object detection**, **instance segmentation**, **polygon detection**, and etc.
 
+### Access to the annotations git repo
+Please first install Git Large File Storage by following the below instructions. You might need to apply this step before you download the sql file from paperdoll repo.
+```
+https://help.github.com/articles/installing-git-large-file-storage/
+```
+
+Then you should git clone the repo along with the annotation files, otherwise the annotation files would not be downloaded directly using `git clone`.
+
+```
+git clone git@github.com:eBay/modanet.git 
+```
+
 
 ### Labels
 Each polygon (bounding box, segmentation mask) annotation is assigned to one of the following labels:
