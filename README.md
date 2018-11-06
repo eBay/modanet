@@ -32,6 +32,24 @@ Then you should git clone the repo along with the annotation files, otherwise th
 git clone git@github.com:eBay/modanet.git 
 ```
 
+Before you start working on the dataset, please verify the annotation files by using `md5sum`. In Mac, this requires you to run the following command:
+```
+md5 modanet2018_instances_train.json
+```
+you should expect to see the following md5 value:
+```
+MD5 (modanet2018_instances_train.json) = 96478657d20e322e9d3282c6d73c0c4c
+```
+If you apply the same command to check the val annotation, you should expect to see:
+```
+MD5 (modanet2018_instances_val.json) = 900b24b7d6c0c48203e6244f45d65499
+```
+
+Notice the file size:
+```
+modanet2018_instances_train.json (101MB)
+modanet2018_instances_val.json (210KB)
+```
 
 ### Labels
 Each polygon (bounding box, segmentation mask) annotation is assigned to one of the following labels:
@@ -193,7 +211,7 @@ To discuss the dataset, please contact [Moda-net Google Group](https://groups.go
 ## Citing ModaNet
 If you use ModaNet, we would appreciate reference to the following paper:
 
-Shuai Zheng, Fan Yang, M. Hadi Kiapour, Robinson Piramuthu. ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations. ACM Multimedia, 2018. [PDF](https://arxiv.org/pdf/1807.01394.pdf)
+Shuai Zheng, Fan Yang, M. Hadi Kiapour, Robinson Piramuthu. ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations. ACM Multimedia, 2018. [PDF 5.7MB](https://arxiv.org/pdf/1807.01394.pdf)
 
 
 Biblatex entry:
