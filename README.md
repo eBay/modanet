@@ -178,7 +178,7 @@ Example
   'score': 0.8}]
 ```
 
-We acknowledge the contribution of COCOdataset team and all the format would follow the same style as those in the COCOdataset.
+We acknowledge the contribution of COCOdataset team and all the format would follow the same style as those in the COCOdataset. Check [COCOAPI](https://github.com/cocodataset/cocoapi).
 
 Thanks to the [EvalAI team](https://evalAI.cloudcv.org), we have [ModaNet challenge leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/136), please submit your best results there. It provides leaderboards for semantic segmentation, instance segmentation, and object detection, all in [COCO-style](http://cocodataset.org). You might need to register an account in EvalAI. 
 
