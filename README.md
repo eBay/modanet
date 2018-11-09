@@ -15,6 +15,7 @@
 **ModaNet** is a street fashion images dataset consisting of annotations related to RGB images. ModaNet provides multiple polygon annotations for each image. This dataset is described in a technical paper with the title [`ModaNet: A Large-Scale Street Fashion Dataset with Polygon Annotations`](https://arxiv.org/pdf/1807.01394.pdf).
 Each polygon is associated with a label from 13 meta fashion categories. The annotations are based on images in the [PaperDoll image set](https://github.com/kyamagu/paperdoll/tree/master/data/chictopia), which has only a few hundred images annotated by the superpixel-based tool. The contribution of ModaNet is to provide new and extra **polygon** annotations for the images.
 
+Thanks to the [EvalAI team](https://evalAI.cloudcv.org), we have [ModaNet challenge leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/151), please submit your best results there. It provides leaderboards for semantic segmentation, instance segmentation, and object detection, all in [COCO-style](http://cocodataset.org). We also provide the per-class IOU score for semantic segmentation task in stdout File. You might need to register an account in EvalAI. 
 
 ## Why we made ModaNet
 
@@ -197,8 +198,6 @@ Example
 ```
 
 We acknowledge the contribution of COCOdataset team and all the format would follow the same style as those in the COCOdataset. Check [COCOAPI](https://github.com/cocodataset/cocoapi).
-
-Thanks to the [EvalAI team](https://evalAI.cloudcv.org), we have [ModaNet challenge leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/151), please submit your best results there. It provides leaderboards for semantic segmentation, instance segmentation, and object detection, all in [COCO-style](http://cocodataset.org). You might need to register an account in EvalAI. 
 
 ## Contributing
 You are more than welcome to contribute to this github repo! Either by submitting a bug report, or providing feedback about this dataset. Please open issues for specific tasks or post to the contact Google group below.
