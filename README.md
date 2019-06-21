@@ -79,6 +79,12 @@ category{
 #### Setup
 
 ```
+pipenv sync
+```
+
+or
+
+```
 pip install -r requirements.txt
 ```
 

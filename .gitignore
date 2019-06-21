@@ -1,7 +1,8 @@
 .ipynb_checkpoints/
-images/*
-labels/*
-!labels/image_urls.tsv
-!labels/class_weight.tsv
-!labels/categories.tsv
-!labels/mean.txt
+.vscode/
+raw/labels/*
+!raw/labels/image_urls.tsv
+!raw/labels/class_weight.tsv
+!raw/labels/categories.tsv
+!raw/labels/mean.txt
+main/*
