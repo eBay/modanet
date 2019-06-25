@@ -79,19 +79,23 @@ category{
 #### Setup
 
 ```
-pipenv sync
+$ git clone https://github.com/hrsma2i/modanet.git ModaNet
+```
+
+```
+$ pipenv sync
 ```
 
 or
 
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Excute the following command at **the parent directory of this repository** (e.g. `modanet/..`)
 
 ```
-git clone https://github.com/hrsma2i/dataset-PaperDoll.git PaperDoll
+$ git clone https://github.com/hrsma2i/dataset-PaperDoll.git PaperDoll
 ```
 
 - Setup PaperDoll dataset according to the instruction in [hrsma2i/dataset-PaperDoll](https://github.com/hrsma2i/dataset-PaperDoll).
@@ -100,9 +104,24 @@ git clone https://github.com/hrsma2i/dataset-PaperDoll.git PaperDoll
   - ModaNet dataset has some image ids that don't exist in PaperDoll dataset. The number of images that exist in the both, is 32,337.
   - The all `url`s(`snap_url`) in PaperDoll are not linked to main snap images that are annotated in ModaNet, so it needs to run `download_images.py`.
 
+Modify `.env` along with you environment.
+Make `main/labels` from `raw/annotations`
 
 ```
-python download_images.py
+$ pipenv shell
+$ python make_main_labels.py
+$ spltj $DATASET_ROOT/main/labels/modanet_snaps.json
+```
+
+Make `tiny` dataset.
+
+```
+$ smplj $DATASET_ROOT/main/labels/modanet_snaps_train.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps_train.json
+$ smplj $DATASET_ROOT/main/labels/modanet_snaps_test.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps_test.json
+```
+
+```
+$ python download_images.py
 ```
 
 This scripts downlaod

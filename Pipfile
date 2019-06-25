@@ -7,6 +7,8 @@ verify_ssl = true
 mypy = "*"
 flake8 = "*"
 autopep8 = "*"
+jupyter = "*"
+ipykernel = "*"
 
 [packages]
 numpy = "*"
@@ -19,6 +21,8 @@ chainer = "*"
 chainercv = "*"
 Cython = "*"
 pycocotools = "*"
+mljsp = {git = "https://github.com/hrsma2i/ml_json_processor.git"}
+matplotlib = "*"
 
 [requires]
 python_version = "3.6"
