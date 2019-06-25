@@ -109,19 +109,21 @@ Make `main/labels` from `raw/annotations`
 
 ```
 $ pipenv shell
-$ python make_main_labels.py
+$ python make_main_label_from_sqlite.py
 $ spltj $DATASET_ROOT/main/labels/modanet_snaps.json
+$ python make_master_category.py
 ```
 
 Make `tiny` dataset.
 
 ```
-$ smplj $DATASET_ROOT/main/labels/modanet_snaps_train.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps_train.json
-$ smplj $DATASET_ROOT/main/labels/modanet_snaps_test.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps_test.json
+$ smplj $DATASET_ROOT/main/labels/modanet_snaps.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps.json
+$ ln -sfn $DATASET_ROOT/main/labels/master_category.csv $DATASET_ROOT/tiny/labels/
 ```
 
 ```
-$ python download_images.py
+$ aiodl $DATASET_ROOT/main/labels/image_urls.csv -o $DATASET_ROOT/main/images
+$ aiodl $DATASET_ROOT/tiny/labels/image_urls.csv -o $DATASET_ROOT/tiny/images
 ```
 
 This scripts downlaod

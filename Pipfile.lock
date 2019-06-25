@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6b0c28ec4f609a15bf67751ba6d50eec2aea731efa1e5295233e8e7bc6f09f80"
+            "sha256": "29d3872939943a843b8b045eaa69470fb8be87ba171f6de97e40973cbb265d25"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,10 @@
         ]
     },
     "default": {
+        "aiodl": {
+            "git": "https://github.com/hrsma2i/aiodl.git",
+            "ref": "91c3eeadc423f586c954ed3230251559afc82bb6"
+        },
         "aiohttp": {
             "hashes": [
                 "sha256:00d198585474299c9c3b4f1d5de1a576cc230d562abc5e4a0e81d71a20a6ca55",
@@ -207,7 +211,7 @@
         },
         "mljsp": {
             "git": "https://github.com/hrsma2i/ml_json_processor.git",
-            "ref": "5cbbba5132c8268c9e4a22e597f3ecdfa1b13e6b"
+            "ref": "523068e39db5ad9ec109ba62424c43c4d7cd2d0d"
         },
         "multidict": {
             "hashes": [
@@ -763,7 +767,8 @@
         },
         "pyrsistent": {
             "hashes": [
-                "sha256:16692ee739d42cf5e39cef8d27649a8c1fdb7aa99887098f1460057c5eb75c3a"
+                "sha256:16692ee739d42cf5e39cef8d27649a8c1fdb7aa99887098f1460057c5eb75c3a",
+                "sha256:e529b6ab1f544f0ca59351af20ab59a17ab9bd0d74efcef472787b4128f82a1d"
             ],
             "version": "==0.15.2"
         },
