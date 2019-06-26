@@ -24,6 +24,7 @@ pycocotools = "*"
 mljsp = {git = "https://github.com/hrsma2i/ml_json_processor.git"}
 matplotlib = "*"
 aiodl = {git = "https://github.com/hrsma2i/aiodl.git"}
+lmdb = "*"
 
 [requires]
 python_version = "3.6"

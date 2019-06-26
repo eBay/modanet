@@ -110,24 +110,37 @@ Make `main/labels` from `raw/annotations`
 ```
 $ pipenv shell
 $ python make_main_label_from_sqlite.py
-$ spltj $DATASET_ROOT/main/labels/modanet_snaps.json
+$ spltj $DATASET_ROOT/main/labels/modanet_snaps.json -s 12345
 $ python make_master_category.py
-$ python make_url_file.py
 ```
 
 Make `tiny` dataset.
 
 ```
 $ smplj $DATASET_ROOT/main/labels/modanet_snaps.json -n 10 -s 12345 -o $DATASET_ROOT/tiny/labels/modanet_snaps.json
-$ spltj $DATASET_ROOT/tiny/labels/modanet_snaps.json
+$ spltj $DATASET_ROOT/tiny/labels/modanet_snaps.json -s 12345
 $ ln -sfn $DATASET_ROOT/main/labels/master_category.csv $DATASET_ROOT/tiny/labels/
-$ python make_url_file.py -s tiny
 ```
 
+Prepare images.
+
+(new version using `photos.lmdb`)
+
 ```
+$ python make_images_from_lmdb.py
+$ python make_images_from_lmdb.py -s tiny
+```
+
+or
+
+(old version using `chictopia.sqlite3`)
+
+```
+$ python make_url_file.py
 $ cd $DATASET_ROOT/main/labels
 $ aiodl -c image_urls.csv -o ../images
 
+$ python make_url_file.py -s tiny
 $ cd $DATASET_ROOT/tiny/labels
 $ aiodl -c image_urls.csv -o ../images
 ```
