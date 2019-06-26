@@ -112,13 +112,16 @@ $ pipenv shell
 $ python make_main_label_from_sqlite.py
 $ spltj $DATASET_ROOT/main/labels/modanet_snaps.json
 $ python make_master_category.py
+$ python make_url_file.py
 ```
 
 Make `tiny` dataset.
 
 ```
-$ smplj $DATASET_ROOT/main/labels/modanet_snaps.json -n 10 -o $DATASET_ROOT/tiny/labels/modanet_snaps.json
+$ smplj $DATASET_ROOT/main/labels/modanet_snaps.json -n 10 -s 12345 -o $DATASET_ROOT/tiny/labels/modanet_snaps.json
+$ spltj $DATASET_ROOT/tiny/labels/modanet_snaps.json
 $ ln -sfn $DATASET_ROOT/main/labels/master_category.csv $DATASET_ROOT/tiny/labels/
+$ python make_url_file.py -s tiny
 ```
 
 ```
