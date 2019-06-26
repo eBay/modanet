@@ -122,8 +122,11 @@ $ ln -sfn $DATASET_ROOT/main/labels/master_category.csv $DATASET_ROOT/tiny/label
 ```
 
 ```
-$ aiodl $DATASET_ROOT/main/labels/image_urls.csv -o $DATASET_ROOT/main/images
-$ aiodl $DATASET_ROOT/tiny/labels/image_urls.csv -o $DATASET_ROOT/tiny/images
+$ cd $DATASET_ROOT/main/labels
+$ aiodl -c image_urls.csv -o ../images
+
+$ cd $DATASET_ROOT/tiny/labels
+$ aiodl -c image_urls.csv -o ../images
 ```
 
 This scripts downlaod
