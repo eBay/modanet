@@ -6,4 +6,5 @@ raw/labels/*
 !raw/labels/categories.tsv
 !raw/labels/mean.txt
 main/*
+main_lmdb/*
 tiny/*
